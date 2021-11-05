@@ -79,20 +79,20 @@ export class DateTimePickerComponent
     });
   }
 
-  // writeValue(newModel: string) {
-  //   if (newModel) {
-  //     this.datetime = Object.assign(
-  //       this.datetime,
-  //       DateTimeModel.fromLocalString(newModel)
-  //     );
+  writeValue(newModel: string) {
+    if (newModel) {
+      this.datetime = Object.assign(
+        this.datetime,
+        DateTimeModel.fromLocalString(newModel)
+      );
       
-  //     this.dateString = newModel;
-  //     this.setDateStringModel();
+      this.dateString = newModel;
+      this.setDateStringModel();
 
-  //   } else {
-  //     this.datetime = new DateTimeModel();
-  //   }
-  // }
+    } else {
+      this.datetime = new DateTimeModel();
+    }
+  }
 
   registerOnChange(fn: any): void {
     this.onChange = fn;
