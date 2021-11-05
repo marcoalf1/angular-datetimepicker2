@@ -80,6 +80,7 @@ export class DateTimePickerComponent
   }
 
   writeValue(newModel: string) {
+    console.log(newModel);
     if (newModel) {
       this.datetime = Object.assign(
         this.datetime,
@@ -170,6 +171,9 @@ export class DateTimePickerComponent
         this.firstTimeAssign = false;
       }
     }
+
+    console.log(new Date(1995, 11, 17, 3, 24, 0).toISOString());
+
   }
 
   inputBlur($event) {

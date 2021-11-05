@@ -9,9 +9,9 @@ import { FormGroup, FormControl, Validators, AbstractControl, ValidatorFn } from
 export class AppComponent implements OnInit  {
   
   formGroup : FormGroup;
-  dateModel: Date = new Date();
+  //dateModel: Date = new Date();
 
-  stringDateModel: string = new Date().toString();
+  //stringDateModel: string = new Date().toString();
 
   ngOnInit() {
     this.formGroup = new FormGroup({
