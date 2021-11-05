@@ -4,19 +4,19 @@
     <div class="row" [formGroup]="formGroup">
       <div class="form-group col-sm-6">
         <label for="activeEndDate">Active End Date</label>
+        
         <app-date-time-picker
           formControlName="activeEndDate"
           name="activeEndDate"
         ></app-date-time-picker>
+
         <div
           class="text-danger"
           *ngIf="formGroup.get('activeEndDate').errors?.required"
         >
           Active End Date is required.
         </div>
-        <div
-          class="text-danger"
-          *ngIf="
+        <div class="text-danger" *ngIf="
             formGroup.get('activeEndDate')?.value &&
             formGroup.get('activeEndDate')?.errors?.isValid
           "
