@@ -1,24 +1,6 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  forwardRef,
-  ViewChild,
-  AfterViewInit,
-  Injector,
-} from '@angular/core';
-import {
-  NgbTimeStruct,
-  NgbDateStruct,
-  NgbPopoverConfig,
-  NgbPopover,
-  NgbDatepicker,
-} from '@ng-bootstrap/ng-bootstrap';
-import {
-  NG_VALUE_ACCESSOR,
-  ControlValueAccessor,
-  NgControl,
-} from '@angular/forms';
+import {Component,OnInit,Input,forwardRef,ViewChild,AfterViewInit,Injector} from '@angular/core';
+import {NgbTimeStruct,NgbDateStruct,NgbPopoverConfig,NgbPopover,NgbDatepicker} from '@ng-bootstrap/ng-bootstrap';
+import {NG_VALUE_ACCESSOR,ControlValueAccessor,NgControl} from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { DateTimeModel } from './date-time.model';
 import { noop } from 'rxjs';
@@ -86,10 +68,9 @@ export class DateTimePickerComponent
         this.datetime,
         DateTimeModel.fromLocalString(newModel)
       );
-      
+
       this.dateString = newModel;
       this.setDateStringModel();
-
     } else {
       this.datetime = new DateTimeModel();
     }
@@ -173,7 +154,6 @@ export class DateTimePickerComponent
     }
 
     console.log(new Date(1995, 11, 17, 3, 24, 0).toISOString());
-
   }
 
   inputBlur($event) {
